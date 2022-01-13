@@ -5,8 +5,26 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
+body,
+.container {
   background-color: #c0ebf9;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
 }
 
 h1 {
@@ -15,96 +33,62 @@ h1 {
   color: #467745;
 }
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media only screen and (max-width: 640px) {
+  .form {
+    align-items: flex-start;
+  }
 }
 
 .targy {
   font-weight: medium;
   font-size: 16px;
-  max-width: 600px;
+  color: #467745;
+  width: 600px;
   height: 64px;
-  color: #467745;
-}
-
-.targy::placeholder {
-  font-size: 16px;
-  color: #467745;
-}
-
-.checkboxes {
-  letter-spacing: 0.2em;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
-.checkbox1 {
-  font-size: 16px;
-  color: #467745;
-  display: grid;
-  grid-template-columns: 25px auto;
-}
-
-.checkbox2 {
-  font-size: 16px;
-  color: #467745;
-  display: grid;
-  grid-template-columns: 25px auto;
+  border: none;
+  padding: 20px;
 }
 
 .megjegyzes {
+  font-weight: regular;
   font-size: 16px;
-  max-width: 600px;
+  width: 600px;
   height: 120px;
   color: #467745;
-}
-
-.container {
-  width: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-}
-
-.mentes {
-  font-weight: bold;
-  font-size: 21px;
-  background-color: #467745;
-  color: #c0ebf9;
-  width: 280px;
-  height: 80px;
-}
-
-.feedback {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  border: none;
+  padding: 20px;
 }
 
 @media only screen and (max-width: 640px) {
-  .feedback > input {
-    margin: 0 20px;
-    width: 100%;
+  .form {
+    margin: 0px 20px;
   }
 
   .targy {
-    margin: 0 20px;
     width: 100%;
   }
 
-  h1 {
-    text-align: left;
-  }
-
   .megjegyzes {
-    margin: 0 20px;
+    width: 100%;
   }
+}
+
+.checkbox {
+  color: #467745;
+  gap: 20px;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 21px;
+  width: 280px;
+  height: 80px;
+  background-color: #467745;
+  color: #c0ebf9;
+  letter-spacing: 0.2em;
+  border: none;
 }

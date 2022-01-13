@@ -15,31 +15,25 @@
   </head>
   <body>
     <div class="container">
-      <div class="feedback">
-        <h1>Visszajelzés</h1>
+      <div class="form">
+        <h1 class="haegy">Visszajelzés</h1>
         <input type="text" placeholder="Tárgy" class="targy" />
-        <textarea
-          placholder="Megjegyzés"
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          class="megjegyzes"
-        ></textarea>
-        <div class="checkboxes">
+        <textarea placeholder="Megjegyzés" class="megjegyzes"></textarea>
+        <div class="checkbox">
           <div class="checkbox1">
             <input type="checkbox" />
-            <p>Elolvastam és elfogadtam az adatkezelési tájékoztatót</p>
+            <label for="checbox1"
+              >Elolvastam és elfogadom az
+              <span>Adakezelési tájékoztatót</span></label
+            >
           </div>
           <div class="checkbox2">
-            <input type="checkbox" name="Szeretnék hírlevelet kapni" />
-            <p>Szeretnék hírlevelet kapni</p>
-          </div>
-          <div class="buttonsave">
-            <button value="Mentés" class="mentes">MENTÉS</button>
+            <input type="checkbox" />
+            <label for="checkbox2">Szeretnék hírlevelet kapni</label>
           </div>
         </div>
       </div>
+      <button type="submit" class="button">MENTÉS</button>
     </div>
   </body>
 </html>
